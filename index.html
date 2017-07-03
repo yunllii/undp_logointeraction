@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html style="width: 100%;height: 100%" lang="en">
     <head>
         <meta charset="utf-8">
 <!--
@@ -19,15 +19,21 @@
 -->
     <title>Sustainable Development Goals</title>
      <script src="dist/snap.svg-min.js"></script>
+    <script src="js/bodymovin.js"></script>
+        
+
+        
     <style>
+
 /*    center the svg*/
     svg{
 				display: block;
 				margin: auto;
-				-webkit-transform-origin: top center;
+				-webkit-transform-origin: top left;
 /*				-webkit-transform: scale(1.5);*/
-				-moz-transform-origin: top center;
+				-moz-transform-origin: top left;
 /*				-moz-transform: scale(1.5);*/
+        
 	}
      
         
@@ -36,10 +42,21 @@
             opacity: 0.5;
         }
         
-        svg .cls-3:hover{
-            fill:#02558b;
-            opacity: 1;
+       .cls-3{
+/*            stroke: #000;*/
+/*
+            stroke-width: 10px;
+            stroke-dasharray:10;
+            stroke-dashoffset:-125;
+           stroke-linecap: butt;  
+*/
+            -webkit-transition: all 2s ease-out;
+            -moz-transition: all 2s ease-out;
+            -ms-transition: all 2s ease-out;
+            -o-transition: all 2s ease-out;
+            transition: all 2s ease-out;
         }
+        
         
         
        
@@ -49,7 +66,13 @@
     
     </style>
     <link rel="stylesheet" href="/fonts/stylesheet.css">
-    <script>
+
+        
+    </head>
+    
+   <body style="margin: 0px;height: 100%;">
+    
+        <script>
     window.onload = function(){
         
         var logogroup = Snap.select('#LogoWheel'),
@@ -57,25 +80,48 @@
             logotimer = {},
             animating = {},
             i = 0, j=0;
+         var container = document.getElementById('bodymovin');
+    var animData = {
+        wrapper: container,
+        animType: 'html',
+        loop: false,
+        prerender: false,
+        autoplay: false,
+        path: 'json/SeparatedLayer.json'
+
+    };
+    
+    var anim = bodymovin.loadAnimation(animData);
+    
+    
+    
+    function playanim(){
+    anim.goToAndPlay(0);
+    console.log("Hi");
+    anim.addEventListener('loopComplete', restart);
+    };
+    
+    container.onclick = playanim;
+    function onComplete(){
+        console.log("I am done");
     }
     
-//    function hoverIn(){
-//        show(this.)
-//    }
-//        
-//    for (i=0; i <18; i++){
-//        
-//    }
+    function restart(){
+        //anim.goToAndStop(0);
+        console.log("I am done");
+        anim.removeEventListener('loopComplete', restart);
+    }
+    }
+    
         
     </script>
-        
-    </head>
-    
-    <body>
-        
-     <div>
-        
-        <svg id="LogoWheel" x="200px" width="200" height="70" data-name="LogoWheel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1699.61 1699.22"><defs><style>.cls-1,.cls-17{fill:#d3a029;}.cls-1{opacity:0.7;}.cls-2{fill:#183668;}.cls-3{fill:#02558b;}.cls-4{fill:#5dbb46;}.cls-5{fill:#007dbc;}.cls-6{fill:#48773e;}.cls-7{fill:#cf8d2a;}.cls-8{fill:#f99d26;}.cls-9{fill:#e11484;}.cls-10{fill:#f36d25;}.cls-11{fill:#8f1838;}.cls-12{fill:#fdb713;}.cls-13{fill:#00aed9;}.cls-14{fill:#ef402b;}.cls-15{fill:#c31f33;}.cls-16{fill:#279b48;}.cls-18{fill:#eb1c2d;}</style></defs><title>Logo</title>
+
+
+     
+
+       
+<div id="bodymovin" style="z-index:10; position:relative; width:100%;height:100%;" > 
+    <svg id="LogoWheel" x="800px" width="600" height="780" data-name="LogoWheel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1699.61 1699.22"><defs><style>.cls-1,.cls-17{fill:#d3a029;}.cls-1{opacity:0.7;}.cls-2{fill:#183668;}.cls-3{fill:#02558b;}.cls-4{fill:#5dbb46;}.cls-5{fill:#007dbc;}.cls-6{fill:#48773e;}.cls-7{fill:#cf8d2a;}.cls-8{fill:#f99d26;}.cls-9{fill:#e11484;}.cls-10{fill:#f36d25;}.cls-11{fill:#8f1838;}.cls-12{fill:#fdb713;}.cls-13{fill:#00aed9;}.cls-14{fill:#ef402b;}.cls-15{fill:#c31f33;}.cls-16{fill:#279b48;}.cls-18{fill:#eb1c2d;}</style></defs><title>Logo</title>
     <path class="cls-1" d="M1977.78,1066l4.55,53C1981.39,1101.16,1979.86,1083.47,1977.78,1066Z" transform="translate(-284.06 -316.99)"/>
     <path class="cls-2" d="M1110.53,317V687.7a476.81,476.81,0,0,0-124.89,23.08L854.73,363.84A846.32,846.32,0,0,1,1110.53,317Z" transform="translate(-284.06 -316.99)"/>
     <path class="cls-3" d="M937.9,728.87a475.7,475.7,0,0,0-105.22,64.69L582.56,519.67A849.37,849.37,0,0,1,806.94,381.78Z" transform="translate(-284.06 -316.99)"/>
@@ -94,6 +140,10 @@
     <path class="cls-16" d="M1883.19,765.2,1552.56,932.88a481.34,481.34,0,0,0-74.43-100l249.28-274.64A852.85,852.85,0,0,1,1883.19,765.2Z" transform="translate(-284.06 -316.99)"/>
     <path class="cls-17" d="M1688.77,522.78,1439.63,797.27a476.47,476.47,0,0,0-109.17-68.15l135.22-345.31A851,851,0,0,1,1688.77,522.78Z" transform="translate(-284.06 -316.99)"/>
     <path class="cls-18" d="M1414.72,364.83,1279.46,710.29A473,473,0,0,0,1160,687.9V317.09A846.32,846.32,0,0,1,1414.72,364.83Z" transform="translate(-284.06 -316.99)"/></svg>
-        </div>
+       </div>
+
+   
+
+
     </body>
 </html>
