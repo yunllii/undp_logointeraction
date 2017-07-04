@@ -38,17 +38,20 @@
         }
 /*    center the svg*/
 
+        #yellow{
+            color: #d3a029;
+        }
 
      svg {
+         pointer-events:all;
                 fill:white;
-                position:absolute;
-                left:30%;
+/*                position:absolute;*/
+/*                left:30%;*/
 				display: block;
 				margin: 0 auto;
-
-				-webkit-transform-origin: top center;
+/*				-webkit-transform-origin: top center;*/
 /*				-webkit-transform: scale(1.5);*/
-				-moz-transform-origin: top center;
+/*				-moz-transform-origin: top center;*/
 /*				-moz-transform: scale(1.5);*/
          
         
@@ -97,8 +100,7 @@
     </head>
     
    <body style="margin: 0px;height: 100%;">
-       <h1 > Please Click </h1>
-       <p> Here it simulates what happens after the color that represents [02 NO HUNGER] is clicked</p>
+       <p> Here it simulates what happens after the color that represents</p><p id ="yellow"> [02 NO HUNGER]</p> <p>is clicked</p>
         <script>
     window.onload = function(){
         
@@ -145,7 +147,10 @@
         
     </script>
 
-<svg id="colorwheel" xmlns="http://www.w3.org/2000/svg" width="580" height="700" viewBox="0 0 1699.61 1699.22"><defs><style>.cls-1{stroke:#02558b;}.cls-2{stroke:#5dbb46;}.cls-3{stroke:#007dbc;}.cls-4{stroke:#48773e;}.cls-5{stroke:#cf8d2a;}.cls-6{stroke:#f99d26;}.cls-7{stroke:#e11484;}.cls-8{stroke:#f36d25;}.cls-9{stroke:#8f1838;}.cls-10{stroke:#fdb713;}.cls-11{stroke:#00aed9;}.cls-12{stroke:#ef402b;}.cls-13{stroke:#c31f33;}.cls-14{stroke:#279b48;}.cls-15{stroke:#d3a029;}.cls-16{stroke:#eb1c2d;}.cls-17{stroke:#183668;}stroke-width="30"</style></defs><title>Logo_SeparatedLayers</title><g id="Layer_17" data-name="Layer 17"><path class="cls-1" d="M937.9,728.87a475.7,475.7,0,0,0-105.22,64.69L582.56,519.67A849.37,849.37,0,0,1,806.94,381.78Z" transform="translate(-284.06 -316.99)"/></g><g id="Layer_16" data-name="Layer 16">
+
+       
+       <div id="bodymovin" style="z-index:10;width:100%;height:90%;pointer-events:none" > 
+           <svg id="colorwheel" xmlns="http://www.w3.org/2000/svg" width=100% height="20%" viewBox="0 0 1699.61 1699.22"><defs><style>.cls-1{stroke:#02558b;}.cls-2{stroke:#5dbb46;}.cls-3{stroke:#007dbc;}.cls-4{stroke:#48773e;}.cls-5{stroke:#cf8d2a;}.cls-6{stroke:#f99d26;}.cls-7{stroke:#e11484;}.cls-8{stroke:#f36d25;}.cls-9{stroke:#8f1838;}.cls-10{stroke:#fdb713;}.cls-11{stroke:#00aed9;}.cls-12{stroke:#ef402b;}.cls-13{stroke:#c31f33;}.cls-14{stroke:#279b48;}.cls-15{stroke:#d3a029;}.cls-16{stroke:#eb1c2d;}.cls-17{stroke:#183668;}stroke-width="30" </style></defs><title>Logo_SeparatedLayers</title><g id="Layer_17" data-name="Layer 17"><path class="cls-1" d="M937.9,728.87a475.7,475.7,0,0,0-105.22,64.69L582.56,519.67A849.37,849.37,0,0,1,806.94,381.78Z" transform="translate(-284.06 -316.99)"/></g><g id="Layer_16" data-name="Layer 16">
 <path class="cls-2" d="M795.32,827.07a479.48,479.48,0,0,0-77.44,101.07L386.11,762.38a850.94,850.94,0,0,1,159.24-209Z" transform="translate(-284.06 -316.99)"/></g><g id="Layer_15" data-name="Layer 15">
 <path class="cls-3" d="M694.95,973.46a474.61,474.61,0,0,0-34.64,118.36L290.38,1062a844.85,844.85,0,0,1,72.85-254.22Z" transform="translate(-284.06 -316.99)"/></g><g id="Layer_14" data-name="Layer 14">
 <path class="cls-4" d="M665.49,1268.75,309.11,1371.9a850.92,850.92,0,0,1-25.06-205.49q0-25.87,1.53-51.4l369.48,29.75c-.39,7.17-.54,14.38-.54,21.65A478.26,478.26,0,0,0,665.49,1268.75Z" transform="translate(-284.06 -316.99)"/></g><g id="Layer_13" data-name="Layer 13">
@@ -164,8 +169,6 @@
 <path class="cls-16" d="M1414.72,364.83,1279.46,710.29A473,473,0,0,0,1160,687.9V317.09A846.32,846.32,0,0,1,1414.72,364.83Z" transform="translate(-284.06 -316.99)"/></g><g id="Layer_1" data-name="Layer 1">
 <path class="cls-17" d="M1110.53,317V687.7a476.81,476.81,0,0,0-124.89,23.08L854.73,363.84A846.32,846.32,0,0,1,1110.53,317Z" transform="translate(-284.06 -316.99)"/></g></svg>
 
-       
-       <div id="bodymovin" style="z-index:10; position:relative; width:100%;height:90%;pointer-events:none" > 
        </div>
        
 
